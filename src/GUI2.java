@@ -1,5 +1,3 @@
-import java.util.ArrayList;
-
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -20,7 +18,7 @@ import javafx.stage.Stage;
  * 
  * @author dannykhalil
  * 
- *  MOCKUP GUI V1
+ *  MOCKUP GUI V2
  *
  */
 public class GUI2 extends Application

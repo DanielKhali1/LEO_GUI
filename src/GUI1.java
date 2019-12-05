@@ -50,9 +50,27 @@ public class GUI1 extends Application
 
 	final String PANE_BACKGROUND_COLOR = "#2e2e2e";
 	
+	TextField textfield1;
+	TextField textfield2;
+	Button button1;
+	Button button2;
+	Button button3;
+	Button button4;
+	Button button5;
+	Button button6;
+	
 	@Override
 	public void start(Stage primaryStage) throws Exception 
 	{
+		textfield1 = new TextField();
+		textfield2 = new TextField();
+		button1 = new Button(BUTTON_NAME_1);
+		button2 = new Button(BUTTON_NAME_2);
+		button3 = new Button(BUTTON_NAME_3);
+		button4 = new Button(BUTTON_NAME_4);
+		button5 = new Button(BUTTON_NAME_5);
+		button6 = new Button(BUTTON_NAME_6);
+		
 		masterPaneSetup();
 		
 		primaryStage.setScene(scene);
@@ -71,15 +89,7 @@ public class GUI1 extends Application
 		Text label2 = new Text(LABEL_2);
 		Text label3 = new Text(LABEL_3);
 		
-		TextField textfield1 = new TextField();
-		TextField textfield2 = new TextField();
-		
-		Button button1 = new Button(BUTTON_NAME_1);
-		Button button2 = new Button(BUTTON_NAME_2);
-		Button button3 = new Button(BUTTON_NAME_3);
-		Button button4 = new Button(BUTTON_NAME_4);
-		Button button5 = new Button(BUTTON_NAME_5);
-		Button button6 = new Button(BUTTON_NAME_6);
+
 		
 		VBox Vbutton1 = new VBox();
 		VBox Vbutton2 = new VBox();

@@ -15,7 +15,7 @@ import javafx.stage.Stage;
  * 
  * @author dannykhalil
  * 
- *  MOCKUP GUI FOR LEO GALLURUCCISSI V1
+ *  MOCKUP GUI FOR LEO GALLURUCCISSI V4
  *
  */
 public class GUI4 extends Application
@@ -35,11 +35,6 @@ public class GUI4 extends Application
 	final String LABEL_6 = "Label 6";
 	
 	final String BUTTON_NAME_1 = "Button 1";
-	final String BUTTON_NAME_2 = "Button 2";
-	final String BUTTON_NAME_3 = "Button 3";
-	final String BUTTON_NAME_4 = "Button 4";	
-	final String BUTTON_NAME_5 = "Button 5";
-	final String BUTTON_NAME_6 = "Button 6";
 	
 	final int FONT_SIZE = 15;
 	final String FONT_FAMILY = "Ariel";
@@ -52,12 +47,34 @@ public class GUI4 extends Application
 	final String BUTTON_BORDER_COLOR = "#a1a1a1";
 	final String PANE_BACKGROUND_COLOR = "#2e2e2e";
 	final String TAB_BACKGROUND_COLOR = "#3b3b3b";
-
+	
+	tf outputTextField1;
+	tf inptextfield1;
+	tf inptextfield2;
+	tf inptextfield3;
+	tf inptextfield4;
+	tf inptextfield5;
+	tf inptextfield6;
+	tf inptextfield7;
+	tf inptextfield8;
+	bt button1;
 	
 	
 	@Override
 	public void start(Stage primaryStage) throws Exception 
 	{
+		outputTextField1 = new tf();
+		inptextfield1 = new tf();
+		inptextfield2 = new tf();
+		inptextfield3 = new tf();
+		inptextfield4 = new tf();
+		inptextfield5 = new tf();
+		inptextfield6 = new tf();
+		inptextfield7 = new tf();
+		inptextfield8 = new tf();
+		button1 = new bt(BUTTON_NAME_1);
+		
+		
 		masterPaneSetup();
 		
 		primaryStage.setScene(scene);
@@ -71,40 +88,21 @@ public class GUI4 extends Application
 	private void masterPaneSetup() 
 	{
 		// INITIALIZING NODES
-		tf outputTextField1 = new tf();
 		outputTextField1.relocate(40, 30);
 		
 		VBox vb1 = new VBox();
-		
 		HBox hb1 = new HBox();
 		HBox hb2 = new HBox();
 		HBox hb3 = new HBox();
 		HBox hb4 = new HBox();
-		
 		txt label1 = new txt(LABEL_1);
 		txt label2 = new txt(LABEL_2);
 		txt label3 = new txt(LABEL_3);
 		txt label4 = new txt(LABEL_4);
-		
-		tf inptextfield1 = new tf();
-		tf inptextfield2 = new tf();
-		tf inptextfield3 = new tf();
-		tf inptextfield4 = new tf();
-		
-		hb1.getChildren().addAll(label1, inptextfield1);
-		hb2.getChildren().addAll(label2, inptextfield2);
-		hb3.getChildren().addAll(label3, inptextfield3);
-		hb4.getChildren().addAll(label4, inptextfield4);
-		
-		vb1.getChildren().addAll(hb1, hb2, hb3, hb4);
-		hb1.setSpacing(20);
-		hb2.setSpacing(20);
-		hb3.setSpacing(20);
-		hb4.setSpacing(20);
-		vb1.setSpacing(20);
-		
-		vb1.relocate(20, 90);
-		
+		txt label5 = new txt(LABEL_1);
+		txt label6 = new txt(LABEL_2);
+		txt label7 = new txt(LABEL_3);
+		txt label8 = new txt(LABEL_4);
 		VBox vb2 = new VBox();
 		
 		HBox hb5 = new HBox();
@@ -112,31 +110,32 @@ public class GUI4 extends Application
 		HBox hb7 = new HBox();
 		HBox hb8 = new HBox();
 		
-		txt label5 = new txt(LABEL_1);
-		txt label6 = new txt(LABEL_2);
-		txt label7 = new txt(LABEL_3);
-		txt label8 = new txt(LABEL_4);
-		
-		tf inptextfield5 = new tf();
-		tf inptextfield6 = new tf();
-		tf inptextfield7 = new tf();
-		tf inptextfield8 = new tf();
-		
+		hb1.getChildren().addAll(label1, inptextfield1);
+		hb2.getChildren().addAll(label2, inptextfield2);
+		hb3.getChildren().addAll(label3, inptextfield3);
+		hb4.getChildren().addAll(label4, inptextfield4);
 		hb5.getChildren().addAll(label5, inptextfield5);
 		hb6.getChildren().addAll(label6, inptextfield6);
 		hb7.getChildren().addAll(label7, inptextfield7);
 		hb8.getChildren().addAll(label8, inptextfield8);
 		
-		vb2.getChildren().addAll(hb5, hb6, hb7, hb8);
+		hb1.setSpacing(20);
+		hb2.setSpacing(20);
+		hb3.setSpacing(20);
+		hb4.setSpacing(20);
+		vb1.setSpacing(20);
 		hb5.setSpacing(20);
 		hb6.setSpacing(20);
 		hb7.setSpacing(20);
 		hb8.setSpacing(20);
 		vb2.setSpacing(20);
 		
+		vb1.relocate(20, 90);
 		vb2.relocate(20, 90);
+
+		vb1.getChildren().addAll(hb1, hb2, hb3, hb4);
+		vb2.getChildren().addAll(hb5, hb6, hb7, hb8);
 		
-		bt button1 = new bt(BUTTON_NAME_6);
 		button1.relocate(170, 280);
 
 		master_pane.getChildren().addAll(outputTextField1, vb1, button1);
